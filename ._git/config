@@ -1,0 +1,20 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/kmsaumcis/mcis6273_f17_datamining.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[user]
+	email = kemaull@saumag.edu
+	name = Keith
+[remote "upstream"]
+	url = https://github.com/kmsaumcis/mcis6273_f17_datamining.git
+	fetch = +refs/heads/*:refs/remotes/upstream/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[branch "gh-pages"]
+	remote = upstream
+	merge = refs/heads/gh-pages
