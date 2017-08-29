@@ -1,7 +1,10 @@
-baseURL = "http://kmsaumcis.github.io/mcis6273_f17_datamining"
+baseURL = "https://kmsaumcis.github.io/mcis6273_f17_datamining"
 languageCode = "en-us"
 title = "MCIS6273 | Data Mining | Fall 2017"
 theme = "hugo-xkmin"
+pygmentsUseClasses = true
+pygmentCodeFences = true
+
 
 [Params]
   dateFormat = "January 2, 2006"
@@ -10,21 +13,21 @@ theme = "hugo-xkmin"
 
 [[menu.main]]
     name = "Home"
-    url = "/"
+    url = ""
     weight = 1
 [[menu.main]]
     name = "Syllabus"
-    url = "/syllabus/"
+    url = "syllabus/"
     weight = 2
 [[menu.main]]
     name = "Homework"
-    url = "/homework/"
+    url = "homework/"
     weight = 3
 [[menu.main]]
     name = "Lecture Notes"
-    url = "/notes/"
+    url = "notes/"
     weight = 4
 [[menu.main]]
     name = "Subscribe"
-    url = "/index.xml"
+    url = "index.xml"
 
