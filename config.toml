@@ -1,4 +1,4 @@
-baseURL = "localhost" #"https://kmsaumcis.github.io/mcis6273_f17_datamining"
+baseURL = "https://kmsaumcis.github.io/mcis6273_f18_datamining"
 languageCode = "en-us"
 title = "MCIS6273 | Data Mining | Fall 2018"
 theme = "hugo-xkmin"
