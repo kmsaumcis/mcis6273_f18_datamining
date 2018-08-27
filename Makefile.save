@@ -1,0 +1,19 @@
+syllabus:
+	cd /mnt/c/Users/Keith/Code/PycharmProjects/mcis6273_f17_datamining_PVT/syllabus; python3 ./generate.py
+	cd ~/_mcis6273_f17_hugo
+	cp /mnt/c/Users/Keith/Code/PycharmProjects/mcis6273_f17_datamining_PVT/syllabus/syllabus.md ./content 
+
+homework:
+	cd /mnt/c/Users/Keith/Code/PycharmProjects/mcis6273_f17_datamining_PVT/homework/hw1; python3 ../generate_hw.py --i hw1.yaml --o hw1.ipynb
+	cd -    
+	cp /mnt/c/Users/Keith/Code/PycharmProjects/mcis6273_f17_datamining_PVT/homework/hw1/hw1.ipynb ./content/homework
+	jupyter nbconvert /mnt/c/Users/Keith/Code/PycharmProjects/mcis6273_f17_datamining_PVT/homework/hw1/hw1.ipynb --to markdown --output-dir=./content/homework
+	pandoc -V geometry:margin=1in ./content/homework/hw1.md -o ./content/homework/hw1.pdf
+	cp ./content/homework/hw1.pdf /mnt/c/Users/Keith/Desktop
+
+slides:
+
+	
+	cd /mnt/c/Users/Keith/Code/PycharmProjects/mcis6273_f17_datamining_PVT/lectures; python3 ../generate_hw.py --i hw1.yaml --o hw1.ipynb
+	cd -    
+	cp /mnt/c/Users/Keith/Code/PycharmProjects/mcis6

@@ -1,6 +1,8 @@
 ---
-title: MCIS6273 Home Page
+title: MCIS6273 Fal 2018 Home Page
 draft: false
 ---
 
-Welcome!
+# Data Mining
+
+
