@@ -58,11 +58,19 @@
 </main>
 
   <footer>
-  <script type="text/x-mathjax-config">
+  <script src="//yihui.name/js/math-code.js"></script>
+
+<script type="text/x-mathjax-config">
 MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true
+  }
 });
 </script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script async src="//yihui.name/js/center-img.js"></script>
 
   
 
