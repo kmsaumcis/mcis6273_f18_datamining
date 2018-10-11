@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on MCIS6273 | Data Mining | Fall 2018</title>
+    <link>https://kmsaumcis.github.io/mcis6273_f18_datamining/tags/</link>
+    <description>Recent content in Tags on MCIS6273 | Data Mining | Fall 2018</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://kmsaumcis.github.io/mcis6273_f18_datamining/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
