@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MCIS6273 Fal 2018 Home Page on MCIS6273 | Data Mining | Fall 2018</title>
+    <link>https://kmsaumcis.github.io/mcis6273_f18_datamining/</link>
+    <description>Recent content in MCIS6273 Fal 2018 Home Page on MCIS6273 | Data Mining | Fall 2018</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://kmsaumcis.github.io/mcis6273_f18_datamining/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://kmsaumcis.github.io/mcis6273_f18_datamining/homework/hw0/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kmsaumcis.github.io/mcis6273_f18_datamining/homework/hw0/</guid>
+      <description>MCIS6273 Data Mining (Prof. Maull) / Fall 2018 / HW0 This assignment is worth up to 20 POINTS to your grade total if you complete it on time.
+   Points Possible Due Date Time Commitment (estimated)     20 Sunday, Sep 09 @ Midnight up to 20 hours     GRADING: Grading will be aligned with the completeness of the objectives.
+ INDEPENDENT WORK: Copying, cheating, plagiarism and academic dishonesty are not tolerated by Univerisity or course policy.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://kmsaumcis.github.io/mcis6273_f18_datamining/syllabus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://kmsaumcis.github.io/mcis6273_f18_datamining/syllabus/</guid>
+      <description>MCIS6273 Data Mining / Fall 2018 / Prof. Maull LECTURE 1: CLASS POLICIES, TOOLS AND TECHNOLOGIES    Week of 8&amp;frasl;27 Lecture Notes     Content class policies, class tools, introduction, what this course is about, data mining: tools, technologies and techniques   ExpectedOutcomes &amp;#8226; overview of course policies&amp;#8226; overview of data mining concepts, algorithms, methodologies&amp;#8226; installation of Anaconda and Python 3.6&amp;#8226; introduction to Jupyter Notebooks&amp;#8226; creation of Github account   Readings &amp;amp;Supplemental REQUIRED&amp;raquo; 2014.</description>
+    </item>
+    
+  </channel>
+</rss>
