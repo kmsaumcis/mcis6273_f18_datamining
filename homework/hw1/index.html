@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> | MCIS6273 | Data Mining | Fall 2018</title>
+    <link rel="stylesheet" href="/mcis6273_f18_datamining/css/style.css" />
+    <link rel="stylesheet" href="/mcis6273_f18_datamining/css/fonts.css" />
+    <style>
+@import url('https://fonts.googleapis.com/css?family=Fanwood+Text:400,400i|Faustina:400,400i,600,600i|Libre+Baskerville|Lora:400,400i,700,700i|Merriweather:400,400i,700,700i|Old+Standard+TT|Open+Sans:400,400i,700,700i|Playfair+Display|Radley|Spectral:400,400i,600,600i,700,700i');
+</style>
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/mcis6273_f18_datamining">Home</a></li>
+      
+      <li><a href="/mcis6273_f18_datamining/syllabus/">Syllabus</a></li>
+      
+      <li><a href="/mcis6273_f18_datamining/homework/">Homework</a></li>
+      
+      <li><a href="/mcis6273_f18_datamining/index.xml">Subscribe</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title"></span></h1>
+
+
+</div>
+
+<main>
+
+
+<h1 id="mcis6273-data-mining-prof-maull-fall-2018-hw1">MCIS6273 Data Mining (Prof. Maull) / Fall 2018 / HW1</h1>
+
+<p><strong>This assignment is worth up to 20 POINTS to your grade total if you complete it on time.</strong></p>
+
+<table>
+<thead>
+<tr>
+<th align="center">Points <br/>Possible</th>
+<th align="center">Due Date</th>
+<th align="center">Time Commitment <br/>(estimated)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="center">20</td>
+<td align="center">Sunday, Oct 21 @ Midnight</td>
+<td align="center"><em>up to</em> 12 hours</td>
+</tr>
+</tbody>
+</table>
+
+<ul>
+<li><p><strong>GRADING:</strong> Grading will be aligned with the completeness of the objectives.</p></li>
+
+<li><p><strong>INDEPENDENT WORK:</strong> Copying, cheating, plagiarism  and academic dishonesty <em>are not tolerated</em> by Univerisity or course policy.  Please see the syllabus for the full departmental and University statement on the academic code of honor.</p></li>
+</ul>
+
+<h2 id="objectives">OBJECTIVES</h2>
+
+<ul>
+<li><p>improve on your homework 0 assignment, if necessary</p></li>
+
+<li><p>work with core Pandas concepts for loading data, working with data types, selecting, filtering and representing and plotting data</p></li>
+
+<li><p>understand and use Pearson&rsquo;s correlation to explore the relationships between variables</p></li>
+</ul>
+
+<h2 id="what-to-turn-in">WHAT TO TURN IN</h2>
+
+<p>You are being encouraged to turn the assignment in using the provided
+Jupyter Notebook.  To do so, make a directory in your Lab environment called
+<code>homework/hw1</code>.   Put all of your files in that directory.  Then zip that directory,
+rename it with your name as the first part of the filename (e.g. <code>maull_hw1_files.zip</code>), then
+download it to your local machine, then upload the <code>.zip</code> to Blackboard.</p>
+
+<p>If you do not know how to do this, please ask, or visit one of the many tutorials out there
+on the basics of using zip in Linux.</p>
+
+<h2 id="assignment-tasks">ASSIGNMENT TASKS</h2>
+
+<h3 id="70-work-with-core-pandas-concepts-for-loading-data-working-with-data-types-selecting-filtering-and-representing-and-plotting-data">(70%) work with core Pandas concepts for loading data, working with data types, selecting, filtering and representing and plotting data</h3>
+
+<p>Pandas, as we will learn, is a powerful tool that allows for a great deal of data engineering, preliminary analysis and exploration
+data analysis activities.  We will use it in this part of the homework to explore a specific dataset.
+Denver, Colorado is called the &ldquo;mile high&rdquo; city because it is around 5280 feet above sea level.  Upon flying
+into Denver you may hear on the train to the terminal that Denver boasts nearly 300 days of sunshine annually.
+This claim is widespread among people who live in and around Denver, and while it is very sunny year round in
+Denver, this claim may be called into question and may vary greatly by the definition of &ldquo;sunny day&rdquo;.</p>
+
+<p>Being data scientists, we&rsquo;re going to demonstrate how we could begin the process of verifying
+this claim and put shape to the reality of sunshine in Denver (and perhaps other places).</p>
+
+<p><strong>DATA</strong></p>
+
+<p>The <a href="www.noaa.gov">National Oceanic and Atompsheric Agency (NOAA)</a> is a US goverment agency responsible for many
+data collection and dissemination activities around the weather (both weahter that is normal and extreme).  Weather,
+of course, has been the subject of much observation by humans over the millenia, but weather data collection
+activities have become more widespread, consistent and prolific with advances in technology, engineering and science.</p>
+
+<p>Unsurprisingly, data about sunshine is widely collected today.  What is quite surprising, however, is that data
+for sunshine in the US goes back to the late 1800s.  We will not try to deconstruct the definition of &ldquo;sunshine&rdquo;,
+since that definition has changed somewhat over the years with more consistent data collection tools and methodologies.
+We&rsquo;re primarily concerned only that the dataset exists and is available to us.</p>
+
+<p>We&rsquo;re going to use Pandas to load the dataset, and analyze it to build an argument with data that demonstrates
+the reality of sunshine in Denver (and maybe a few other places, just for fun).</p>
+
+<p>&#167;  <strong>READ THE ARTICLE <a href="https://www.westword.com/news/denvers-claim-of-300-days-of-sunshine-a-year-is-clouded-10565181">&ldquo;Throwing Shade on Denver&rsquo;s Claim of 300 Days of Sunshine a Year&rdquo;</a>
+[Chris Bianchi, 07/23/2018, Westword.com Magazine] AND ANSWER THE FOLLOWING QUESTION</strong>:</p>
+
+<ul>
+<li>What, according to the article, is the definition of a &ldquo;sunny day&rdquo;?</li>
+</ul>
+
+<p>&#167;  <strong>LOAD THE DATASET</strong></p>
+
+<p>We&rsquo;ve learned Pandas is adept at grabbing data from a variety of sources and we&rsquo;ve already worked with CSV files,
+as it is a common file format that is durable, easy to store, compress, transmit and edit.  Another
+common file format (similar to CSV, but more common in older datasets) is what is called a &lsquo;fixed width&rsquo; dataset,
+that is each column of data resides with a certain range of row widths.</p>
+
+<p>The dataset we will be working with is maintained by NOAA and contains a large number of data</p>
+
+<p>We will be working with a large text file file for this part of the assignment.  You will need to first pull the file
+to your local file system any way you see fit:  you can use the terminal in you Lab environment and perform
+<code>wget</code>, you can download the file to your local system and then upload it to your lab environment, etc.</p>
+
+<p>In whatever way you&rsquo;d like (e.g. curl, wget, <code>requests</code>), pull the following dataset to your local filespace:</p>
+
+<ul>
+<li><p>Steurer P M; Karl T R (2018): Historical Sunshine and Cloud Data in the
+United States (revised 1991) (NDP-021). Carbon Dioxide Informational Analysis Center (CDIAC),
+Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States). <a href="https://dx.doi.org/10.3334/CDIAC/CLI.NDP021">doi:10.3334/CDIAC/CLI.NDP021</a></p></li>
+
+<li><p>You will need the file:</p>
+
+<ul>
+<li><a href="https://cdiac.ucsd.edu/ftp/ndp021r1.f10"><code>https://cdiac.ucsd.edu/ftp/ndp021r1.f10</code></a></li>
+<li>it would also be a good idea if you took a look at the <a href="https://cdiac.ucsd.edu/ftp/ndp021/README"><code>README</code></a>
+to understand these and other files in the CDIAC repository <a href="https://cdiac.ucsd.edu/ftp/ndp021/"><code>https://cdiac.ucsd.edu/ftp/ndp021/</code></a></li>
+</ul></li>
+</ul>
+
+<p>&#167;  <strong>PLOT THE MEAN ANNUAL SUNSHINE DATA FOR DENVER, CO OVER THE ENTIRE DATA AVAILABLE</strong></p>
+
+<p>This plot should have the years as the $x$-axis and the sunshine hours for that year on the $y$-axis.
+To complete this part, you will need to explore the <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.plot.html#pandas.DataFrame.plot"><code>DataFrame.plot()</code></a> method.</p>
+
+<ul>
+<li>Please write your rationale <em>using the data in your analysis</em> for the support (or lack of support) for
+the claim that Denver gets 300 days of sunshine.</li>
+<li>What is the <strong>actual</strong> number of days of sunshine <em>according to
+your sunshine hours</em> analysis (you can simply multiply your calculation by 365)?</li>
+</ul>
+
+<p>&#167;  <strong>WRITE A FUNCTION THAT COMPUTES THE PERCENT ANNUAL SUNSHINE FOR A GIVEN STATION</strong></p>
+
+<p>To complete this part, you will need to use a second dataset, which contains the <em>potential</em> sunshine hours
+for a given city.  This data will can be found at the following location:</p>
+
+<ul>
+<li><a href="https://cdiac.ucsd.edu/ftp/ndp021r1.f11"><code>https://cdiac.ucsd.edu/ftp/ndp021r1.f11</code></a></li>
+</ul>
+
+<p>Your function will look something like this:</p>
+
+<pre><code class="language-python">def compute_sunshine_hours(station_id):
+   # your code goes here
+
+   return # the calculated sunshine hours
+</code></pre>
+
+<p>Remember, all you need is the mean sunshine hours over <em>all</em> the data and potential sunshine hours.  The
+calculation is simply $$\rho_s = \frac{\mu_s}{\tau_s}$$ where $\mu_s$ is the mean sunshine hours, and $\tau_s$
+the potential hours.  You will, of course, need to pull the data for potential hours into its own DataFrame.</p>
+
+<p>&#167;  <strong>USING THE FUNCTION FROM THE PREVIOUS PART, PLEASE GIVE THE MEAN ANNUAL SUNSHINE HOURS FOR THE FOLLOWING STATIONS</strong></p>
+
+<ul>
+<li>station #23042 (Lubbock, TX)</li>
+<li>station #25309 (Anchorage, AK)</li>
+<li>station #21504 (Hilo, HI)</li>
+<li>Which of these is most surprising and why?</li>
+</ul>
+
+<p>&#167;  <strong>SORT ALL THE STATIONS BY THE TOTAL ANNUAL SUNSHINE HOURS AND SORT BY THE TOP 25 CITIES</strong></p>
+
+<ul>
+<li>make sure the DataFrame for the sorted top25 is called <code>sorted_top25</code>, you will need to use your function from above;</li>
+<li>according to this data, which would be your choice (based on percent sunshine hours): live in <strong>(a)</strong> San Diego
+or <strong>(b)</strong> Dodge City, KS?  Why?</li>
+</ul>
+
+<h3 id="30-understand-and-use-pearson-s-correlation-to-explore-the-relationships-between-variables">(30%) understand and use Pearson&rsquo;s correlation to explore the relationships between variables</h3>
+
+<p>In the prior part we computed the annual sunshine for the cities in our dataset.  It should be obvious
+upon looking at the results why certain places receive more sunshine than others.  And eventhough
+we can eyeball the answer to what the common features are of the cities in the top 10 of the list,
+we must rely on data and techniques for reasoning about data to derive and guide our conclusions.</p>
+
+<p>We talked in lecture and read in our assigned readings about Pearson&rsquo;s correlation or otherwise
+known as Pearsons-$r$.  This technique provides us a tool to determine <em>correlation</em> between
+variables &ndash; that is to determine the relationships between how variables vary with one another.</p>
+
+<p>Recall, that we said there are positive, negative and no correlations, and that there are strong and
+weak variations on either side of positive and negative correlation.</p>
+
+<p>In this part, we are going to continue with our investigation of sunshine and explore a variable
+along side it: precipitation.</p>
+
+<p>NOAA maintains an <a href="https://www.ncdc.noaa.gov/cdo-web/webservices/v2">online API, Climate Data Online</a>,
+that is free to use and exposes access to a tremendous amount of current and historical observational data.
+Since CDO doesn&rsquo;t readily have precipitation data for the stations we&rsquo;re interested in, we&rsquo;re going to
+derive it on our own.</p>
+
+<p>&#167;  <strong>GET AN API TOKEN</strong></p>
+
+<p>Get a fast (instantaneous), free API token to use the CDO API (get it here: <a href="https://www.ncdc.noaa.gov/cdo-web/token">https://www.ncdc.noaa.gov/cdo-web/token</a>).
+You should use your <code>saumag.edu</code> email address &ndash; you will not
+be able to complete the assignment without this token.</p>
+
+<p>&#167;  <strong>COMPUTE THE AVERAGE ANNUAL PRECIPITATION FOR A RANDOM SAMPLE OF 30 STATIONS</strong></p>
+
+<p>CDO provides end users with an endpoint to query historical data.  Much of the work you will need
+for this part is done for you in this Python function:</p>
+
+<pre><code class="language-python">def get_avg_decadal_precipitation(wban=&quot;23062&quot;, start_decade=1980, token=''):
+    import pandas as pd
+
+    headers = {'token': token}
+    url = &quot;https://www.ncdc.noaa.gov/cdo-web/api/v2/data?datasetid=GSOY&amp;datatype=PRCP&amp;stationid=GHCND:USW000{}&amp;startdate={}-01-01&amp;enddate={}-01-01&quot;.format(wban, start_decade, start_decade+10)#&amp;limit=1&quot;
+
+    # get the initial request to know how many pages to look for
+    r = requests.get( &quot;{}&amp;limit=1&quot;.format(url) , headers=headers)
+
+    data = []
+    try:
+        if (r.status_code==200):
+            result = r.json()
+            count = result['metadata']['resultset']['count']
+
+            for offset in range(0, (int)(1.+(count/100))):
+                r = requests.get( &quot;{}&amp;limit=100&amp;offset={}&quot;.format(url, offset*100) , headers=headers)
+                result = r.json()
+
+                for r in result['results']:
+                    if r['datatype']=='PRCP':
+                        data.append(r)
+
+                print(&quot;.&quot;, end=&quot;&quot;)
+        else:
+            print(r.status_code)
+            print(r.text)
+    except Exeception as e:
+        pass # print(e)
+
+    return pd.DataFrame(data).drop(columns=['attributes', 'datatype']).value.describe()['mean']*0.03937008
+</code></pre>
+
+<ul>
+<li><p>You will need to use the <a href="http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.sample.html#pandas.DataFrame.sample"><code>DataFrame.sample(n=30)</code></a>
+method on the DataFrame from the first part.  With that sample, use the <code>WBAN</code> attribute and pass it as
+a parameter to the function along with your token (e.g. <code>get_avg_decadal_precipitation(wban=WBAN, token=TOKEN)</code>).
+You might also optionally explore the <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.apply.html"><code>DataFrame.apply</code></a> method.</p></li>
+
+<li><p>HINT: We are going to develop a dataset of precipation averages from 1940-2010, so this snippet of code
+may be of use to you:</p></li>
+</ul>
+
+<pre><code class="language-python">d = [get_avg_decadal_precipitation(start_decade=dec) for dec in range(1940,2010)]
+
+import statistics
+statistics.mean(d)
+</code></pre>
+
+<p>another way to do the same thing with <code>Series</code> objects:</p>
+
+<pre><code>import pandas as pd
+pd.Series(d).describe()['mean']
+</code></pre>
+
+<p>&#167;  <strong>FIND THE CORRELATION BETWEEN SUNSHINE HOURS AND PRECIPITATION</strong></p>
+
+<ul>
+<li><p>From the previous result, you will need to take the sunshine hours and precipitation and either use the <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.corr.html">DataFrame.corr()</a>
+method or the SciPy <a href="https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.stats.pearsonr.html"><code>scipy.stats.pearson()</code></a>
+method to compute the Pearsons-$r$.</p></li>
+
+<li><p>Explain in your own words what the correlation is indicating.  Is the outcome reasonable?  Explain why or why not.</p></li>
+</ul>
+
+</main>
+
+  <footer>
+  <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+
+  
+
+  </footer>
+  </body>
+</html>
+
