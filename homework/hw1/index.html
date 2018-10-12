@@ -129,8 +129,6 @@ as it is a common file format that is durable, easy to store, compress, transmit
 common file format (similar to CSV, but more common in older datasets) is what is called a &lsquo;fixed width&rsquo; dataset,
 that is each column of data resides with a certain range of row widths.</p>
 
-<p>The dataset we will be working with is maintained by NOAA and contains a large number of data</p>
-
 <p>We will be working with a large text file file for this part of the assignment.  You will need to first pull the file
 to your local file system any way you see fit:  you can use the terminal in you Lab environment and perform
 <code>wget</code>, you can download the file to your local system and then upload it to your lab environment, etc.</p>
@@ -145,8 +143,8 @@ Oak Ridge National Laboratory (ORNL), Oak Ridge, TN (United States). <a href="ht
 <li><p>You will need the file:</p>
 
 <ul>
-<li><a href="https://cdiac.ucsd.edu/ftp/ndp021r1.f10"><code>https://cdiac.ucsd.edu/ftp/ndp021r1.f10</code></a></li>
-<li>it would also be a good idea if you took a look at the <a href="https://cdiac.ucsd.edu/ftp/ndp021/README"><code>README</code></a>
+<li><a href="https://cdiac.ucsd.edu/ftp/ndp021/ndp021r1.f10"><code>https://cdiac.ucsd.edu/ftp/ndp021/ndp021r1.f10</code></a></li>
+<li>it would also be a good idea if you took a look at the <a href="https://cdiac.ucsd.edu/ftp/ndp021/README"><code>README</code></a> and <a href="https://cdiac.ucsd.edu/ftp/ndp021/ndp021r1.txt"><code>ndp021r1.txt</code></a>
 to understand these and other files in the CDIAC repository <a href="https://cdiac.ucsd.edu/ftp/ndp021/"><code>https://cdiac.ucsd.edu/ftp/ndp021/</code></a></li>
 </ul></li>
 </ul>
@@ -169,7 +167,7 @@ your sunshine hours</em> analysis (you can simply multiply your calculation by 3
 for a given city.  This data will can be found at the following location:</p>
 
 <ul>
-<li><a href="https://cdiac.ucsd.edu/ftp/ndp021r1.f11"><code>https://cdiac.ucsd.edu/ftp/ndp021r1.f11</code></a></li>
+<li><a href="https://cdiac.ucsd.edu/ftp/ndp021/ndp021r1.f11"><code>https://cdiac.ucsd.edu/ftp/ndp021/ndp021r1.f11</code></a></li>
 </ul>
 
 <p>Your function will look something like this:</p>
@@ -294,7 +292,7 @@ pd.Series(d).describe()['mean']
 <ul>
 <li><p>From the previous result, you will need to take the sunshine hours and precipitation and either use the <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.corr.html">DataFrame.corr()</a>
 method or the SciPy <a href="https://docs.scipy.org/doc/scipy-0.15.1/reference/generated/scipy.stats.pearsonr.html"><code>scipy.stats.pearson()</code></a>
-method to compute the Pearsons-$r$.</p></li>
+method to compute the Pearsons-$r$ &hellip;</p></li>
 
 <li><p>Explain in your own words what the correlation is indicating.  Is the outcome reasonable?  Explain why or why not.</p></li>
 </ul>
@@ -302,11 +300,22 @@ method to compute the Pearsons-$r$.</p></li>
 </main>
 
   <footer>
-  <script type="text/x-mathjax-config">
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script type="text/x-mathjax-config">
 MathJax.Hub.Config({
-  TeX: { equationNumbers: { autoNumber: "AMS" } }
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
 });
 </script>
+<script async src="//yihui.name/js/center-img.js"></script>
 
   
 
